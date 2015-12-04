@@ -1,0 +1,15 @@
+<h1>Dream Journal</h1>
+
+<ul id="dreams">
+  <% @dreams.each do |dream| %>
+    <li class="dream">
+      <%= dream['description'] %>
+    </li>
+  <% end %>
+</ul>
+
+<form method="post" action="/dreams" id="dream_form">
+  <label for="dream_description">Description</label>
+  <input type="text" name="description" id="dream_description">
+  <input type="submit" value="Add">
+</form>
